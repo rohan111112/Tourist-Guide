@@ -1,0 +1,59 @@
+{
+  "nav": {
+    "placesToGo": "Places to Go",
+    "thingsToDo": "Things to Do",
+    "festivals": "Festivals & Events",
+    "planTrip": "Plan Your Trip",
+    "travelUpdates": "Travel Updates"
+  },
+  "hero": {
+    "title": "Discover Koshi Pradesh",
+    "subtitle": "Explore the natural beauty, rich culture, and adventure opportunities in Nepal's eastern province",
+    "exploreButton": "Explore Now",
+    "planButton": "Plan Your Trip"
+  },
+  "places": {
+    "dharan": {
+      "name": "Dharan",
+      "description": "A beautiful city at the foothills of the Himalayas",
+      "intro": "Dharan is a sub-metropolitan city in Sunsari district, known for its pleasant climate and cultural diversity.",
+      "howToReach": "Accessible by road from Kathmandu (6-7 hours) or by air to Biratnagar (45 minutes from Dharan).",
+      "culture": "A melting pot of different ethnic communities with diverse traditions and festivals.",
+      "food": "Famous for traditional Nepali dal-bhat, local fish curry, and various ethnic cuisines.",
+      "hiddenDestinations": "Namaste Falls, Pindeshwar Temple, Buddha Subba Temple"
+    },
+    "ilam": {
+      "name": "Ilam",
+      "description": "Famous for its tea gardens and scenic beauty",
+      "intro": "Ilam is renowned for its tea plantations, rolling hills, and cool climate.",
+      "howToReach": "Road journey from Kathmandu (12-14 hours) or flight to Bhadrapur (2 hours drive).",
+      "culture": "Rich Nepali hill culture with traditional farming practices and warm hospitality.",
+      "food": "Fresh tea, organic vegetables, traditional Nepali cuisine, and dairy products.",
+      "hiddenDestinations": "Antu Danda, Mai Pokhari, Sandakphu viewpoint"
+    },
+    "koshiTappu": {
+      "name": "Koshi Tappu",
+      "description": "Wildlife reserve famous for bird watching",
+      "intro": "Koshi Tappu Wildlife Reserve is a wetland sanctuary and bird watcher's paradise.",
+      "howToReach": "Drive from Kathmandu (5-6 hours) via East-West Highway.",
+      "culture": "Local Tharu and other ethnic communities with unique wetland culture.",
+      "food": "Fresh fish from Koshi River, traditional Tharu cuisine, and organic rice.",
+      "hiddenDestinations": "Koshi Barrage, Bird watching towers, Traditional Tharu villages"
+    }
+  },
+  "activities": {
+    "trekking": "Trekking",
+    "boating": "Boating",
+    "paragliding": "Paragliding",
+    "rafting": "Rafting & Kayaking",
+    "safari": "Jungle Safari",
+    "camping": "Camping",
+    "hiking": "Hiking"
+  },
+  "festivals": {
+    "title": "Festivals & Events",
+    "dashain": "Dashain - The biggest Hindu festival celebrated with family gatherings",
+    "tihar": "Tihar - Festival of lights with traditional decorations",
+    "teej": "Teej - Women's festival celebrated with fasting and dancing"
+  }
+}
