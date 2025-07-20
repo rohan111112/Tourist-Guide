@@ -2,16 +2,13 @@ import { useTranslation } from 'react-i18next';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { 
-  Compass, 
-  Calendar, 
-  MapPin, 
-  Users, 
-  Star, 
+import {
+  Compass,
+  Calendar,
+  Users,
   Clock,
   ArrowRight,
-  Heart,
-  Gift
+  Star
 } from 'lucide-react';
 
 export default function WelcomeFeatures() {
@@ -40,20 +37,6 @@ export default function WelcomeFeatures() {
       badge: 'TRUSTED'
     },
     {
-      icon: Heart,
-      title: 'Wish List',
-      description: 'Save your favorite places and create custom travel itineraries',
-      color: 'bg-pink-500',
-      badge: 'SAVE'
-    },
-    {
-      icon: Gift,
-      title: 'Local Deals',
-      description: 'Exclusive discounts on accommodations, food, and activities',
-      color: 'bg-orange-500',
-      badge: 'DEALS'
-    },
-    {
       icon: Clock,
       title: 'Real-time Updates',
       description: 'Live weather, road conditions, and travel advisories',
@@ -70,7 +53,7 @@ export default function WelcomeFeatures() {
             Welcome to Your Adventure Hub
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Discover exclusive features designed to make your Koshi Pradesh journey unforgettable. 
+            Discover exclusive features designed to make your Koshi Pradesh journey unforgettable.
             From personalized recommendations to local insider tips.
           </p>
         </div>
@@ -93,9 +76,9 @@ export default function WelcomeFeatures() {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <Button 
-                  variant="ghost" 
-                  size="sm" 
+                <Button
+                  variant="ghost"
+                  size="sm"
                   className="w-full group/btn justify-start"
                 >
                   Learn More
@@ -111,7 +94,7 @@ export default function WelcomeFeatures() {
             <Star className="w-12 h-12 text-primary mx-auto mb-4" />
             <h3 className="text-2xl font-bold mb-4">Start Your Journey Today</h3>
             <p className="text-muted-foreground mb-6">
-              Join thousands of travelers who have discovered the magic of Koshi Pradesh. 
+              Join thousands of travelers who have discovered the magic of Koshi Pradesh.
               Get personalized recommendations and insider access to hidden gems.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

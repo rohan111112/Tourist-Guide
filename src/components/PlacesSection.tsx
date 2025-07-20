@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { ArrowRight, MapPin, Camera, Utensils, Compass } from 'lucide-react';
+
 import dharanImage from '@/assets/clock tower.jpg';
 import ilamImage from '@/assets/ilam.jpg';
 import koshiTappuImage from '@/assets/koshi-tappu.jpg';
@@ -18,34 +19,69 @@ export default function PlacesSection({ selectedPlace, onPlaceSelect }: PlacesSe
   const { t } = useTranslation();
 
   const places = [
-    { 
-      key: 'dharan', 
+    {
+      key: 'dharan',
       name: t('places.dharan.name'),
       image: dharanImage,
       category: 'City',
       highlights: ['Cultural Diversity', 'Pleasant Climate', 'Religious Sites']
     },
-    { 
-      key: 'ilam', 
+    {
+      key: 'ilam',
       name: t('places.ilam.name'),
       image: ilamImage,
       category: 'Hill Station',
       highlights: ['Tea Gardens', 'Scenic Beauty', 'Cool Climate']
     },
-    { 
-      key: 'koshiTappu', 
+    {
+      key: 'koshiTappu',
       name: t('places.koshiTappu.name'),
       image: koshiTappuImage,
       category: 'Wildlife Reserve',
       highlights: ['Bird Watching', 'Wildlife', 'Wetlands']
     },
-    { 
-      key: 'kanchenjunga', 
+    {
+      key: 'kanchenjunga',
       name: 'Kanchenjunga Base Camp',
       image: kanchenjungaImage,
       category: 'Trekking',
       highlights: ['Mountain Views', 'Adventure', 'High Altitude']
     },
+    {
+      key: 'panchthar',
+      name: 'Panchthar',
+      image: kanchenjungaImage,
+      category: 'Hill District',
+      highlights: ['Scenic Hills', 'Cultural Sites', 'Peaceful Atmosphere']
+    },
+    {
+      key: 'basantapur',
+      name: 'Basantapur',
+      image: kanchenjungaImage,
+      category: 'Tourist Spot',
+      highlights: ['Rhododendron Forests', 'Snow Views', 'Trekking Routes']
+    },
+    {
+      key: 'halasiMahadev',
+      name: 'Halasi Mahadev',
+      image: kanchenjungaImage,
+      category: 'Religious Site',
+      highlights: ['Historical Temple', 'Hindu Pilgrimage', 'Natural Beauty']
+    },
+    {
+      key: 'bhojpur',
+      name: 'Bhojpur',
+      image: kanchenjungaImage,
+      category: 'Town',
+      highlights: ['Khukuri Making', 'Traditional Culture', 'Hill Scenery']
+    },
+    {
+      key: 'taplejung',
+      name: 'Taplejung',
+      image: kanchenjungaImage,
+      category: 'Mountain Region',
+      highlights: ['Remote Trails', 'Snow Peaks', 'Rich Biodiversity']
+    }
   ];
 
   if (selectedPlace) {
@@ -54,29 +90,25 @@ export default function PlacesSection({ selectedPlace, onPlaceSelect }: PlacesSe
       return (
         <section className="py-16 bg-background">
           <div className="container-responsive">
-            <Button 
-              variant="ghost" 
-              onClick={() => onPlaceSelect('')}
-              className="mb-8"
-            >
+            <Button variant="ghost" onClick={() => onPlaceSelect('')} className="mb-8">
               ← Back to Places
             </Button>
-            
+
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
-                <img 
-                  src={place.image} 
+                <img
+                  src={place.image}
                   alt={place.name}
                   className="w-full h-96 object-cover rounded-lg shadow-large"
                 />
               </div>
-              
+
               <div className="space-y-6">
                 <div>
                   <Badge variant="secondary" className="mb-2">{place.category}</Badge>
                   <h1 className="text-4xl font-bold mb-4">{place.name}</h1>
                   <p className="text-xl text-muted-foreground mb-6">
-                    {t(`places.${selectedPlace}.intro`)}
+                    {t(`places.${selectedPlace}.intro`, 'This is a demo description of the place.')}
                   </p>
                 </div>
 
@@ -85,7 +117,7 @@ export default function PlacesSection({ selectedPlace, onPlaceSelect }: PlacesSe
                     <MapPin className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
                     <div>
                       <h3 className="font-semibold mb-1">How to Reach</h3>
-                      <p className="text-muted-foreground">{t(`places.${selectedPlace}.howToReach`)}</p>
+                      <p className="text-muted-foreground">{t(`places.${selectedPlace}.howToReach`, 'Demo transport details.')}</p>
                     </div>
                   </div>
 
@@ -93,7 +125,7 @@ export default function PlacesSection({ selectedPlace, onPlaceSelect }: PlacesSe
                     <Camera className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
                     <div>
                       <h3 className="font-semibold mb-1">Culture</h3>
-                      <p className="text-muted-foreground">{t(`places.${selectedPlace}.culture`)}</p>
+                      <p className="text-muted-foreground">{t(`places.${selectedPlace}.culture`, 'Demo cultural info.')}</p>
                     </div>
                   </div>
 
@@ -101,7 +133,7 @@ export default function PlacesSection({ selectedPlace, onPlaceSelect }: PlacesSe
                     <Utensils className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
                     <div>
                       <h3 className="font-semibold mb-1">Food</h3>
-                      <p className="text-muted-foreground">{t(`places.${selectedPlace}.food`)}</p>
+                      <p className="text-muted-foreground">{t(`places.${selectedPlace}.food`, 'Demo food details.')}</p>
                     </div>
                   </div>
 
@@ -109,7 +141,7 @@ export default function PlacesSection({ selectedPlace, onPlaceSelect }: PlacesSe
                     <Compass className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
                     <div>
                       <h3 className="font-semibold mb-1">Hidden Destinations</h3>
-                      <p className="text-muted-foreground">{t(`places.${selectedPlace}.hiddenDestinations`)}</p>
+                      <p className="text-muted-foreground">{t(`places.${selectedPlace}.hiddenDestinations`, 'Demo hidden places.')}</p>
                     </div>
                   </div>
                 </div>
@@ -138,14 +170,14 @@ export default function PlacesSection({ selectedPlace, onPlaceSelect }: PlacesSe
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {places.map((place) => (
-            <Card 
-              key={place.key} 
+            <Card
+              key={place.key}
               className="group card-hover cursor-pointer overflow-hidden"
               onClick={() => onPlaceSelect(place.key)}
             >
               <div className="relative h-48 overflow-hidden">
-                <img 
-                  src={place.image} 
+                <img
+                  src={place.image}
                   alt={place.name}
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                 />
@@ -165,7 +197,7 @@ export default function PlacesSection({ selectedPlace, onPlaceSelect }: PlacesSe
                   ))}
                 </div>
                 <Button variant="ghost" size="sm" className="w-full group/btn">
-                  Learn More 
+                  Learn More
                   <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover/btn:translate-x-1" />
                 </Button>
               </CardContent>
